@@ -1,20 +1,114 @@
 /* base */
   /* box-sizing est appliqué à tous les éléments */
 
-  * {
-    box-sizing: border-box;
-  }
-.box 
- {
-     box-sizing: border-box; /* Opera/IE 8+ */
-    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
-    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
- }
+ @import "./base/normes";
+ @import"./base/polices";
+
+/* variable */
+@import "./utils/variables";
+/* function */
+
 
 /* header */
-.logo {
- display: block;
- margin: auto;
- margin-top: 40px;
- width: 285px;
+.logo{ 
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  position: relative;
+  padding: 20px;
+  padding-top: 35px;
+  box-shadow: 0px 0px 10px lighten(nth($color-text, 1), 60%);
+  &__details {
+ width: 200px;
+ }
 }
+/* section 1 */
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section1{
+  background-color: lighten($background-grey, 2.5%);
+  padding-bottom: 50px;
+}
+.location{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+  background-color: darken($background-grey, 2%);
+  color: lighten(nth($color-text, 1), 30%);
+  &--margin-top{
+    margin-top: 20px;
+  }
+    &__icon{
+      &--margin-right{
+         margin-right: 20px;
+      }
+    }
+    &__name{
+      &--font{
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .titre-section1{
+text-align: center;
+padding-top: 30px;
+}
+.paragraph-section1{
+  text-align: center;
+  color: lighten(nth($color-text, 1), 40%);
+}
+.btn-pink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: nth($color-text, 2);
+  background-color: $background-btn-pink;
+  width: 230px;
+  height: 45px;
+  border-radius: 25px / 22px;
+}
+
+/* section 2 */
+.btn{ 
+  display: flex;
+  align-items: center;
+  width: 350px;
+
+  &__icon-number{
+  background-color: $background-number;
+  color: nth($color-text, 2);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+             &--border{
+              border-radius: 20px;
+               }
+ }
+ &__sub-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lighten($background-grey, 2%);
+  width: 330px;
+  height: 50px;              
+  box-shadow: 6px 6px 5px darken($background-grey, 2%);
+  border-radius: 10px;
+               
+                &--color-grey{
+                color: darken($icon-color, 50%);
+                }      
+ }
+}
+
+
+
