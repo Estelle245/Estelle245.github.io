@@ -13,7 +13,6 @@
 .logo{ 
   display: flex;
   justify-content: center;
-  z-index: 100;
   position: relative;
   padding: 20px;
   padding-top: 35px;
@@ -22,15 +21,23 @@
  width: 200px;
  }
 }
-/* section 1 */
+
 section{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 25px;
 }
+h1{
+  align-self: flex-start;
+  margin-bottom: 30px;
+}
+/* section 1 */
 .section1{
   background-color: lighten($background-grey, 2.5%);
+  padding: 0;
   padding-bottom: 50px;
+
 }
 .location{
   display: flex;
@@ -59,10 +66,13 @@ section{
   .titre-section1{
 text-align: center;
 padding-top: 30px;
+margin-bottom: 0;
+align-self: auto;
 }
 .paragraph-section1{
   text-align: center;
   color: lighten(nth($color-text, 1), 40%);
+  margin-bottom: 35px;
 }
 .btn-pink{
   display: flex;
@@ -70,7 +80,8 @@ padding-top: 30px;
   justify-content: center;
   color: nth($color-text, 2);
   background-color: $background-btn-pink;
-  width: 230px;
+  max-width: 230px;
+  width: 100%;
   height: 45px;
   border-radius: 25px / 22px;
 }
@@ -79,36 +90,44 @@ padding-top: 30px;
 .btn{ 
   display: flex;
   align-items: center;
-  width: 350px;
-
-  &__icon-number{
-  background-color: $background-number;
-  color: nth($color-text, 2);
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-             &--border{
-              border-radius: 20px;
-               }
- }
- &__sub-btn{
-  display: flex;
-  align-items: center;
   justify-content: space-evenly;
   background-color: lighten($background-grey, 2%);
-  width: 330px;
-  height: 50px;              
+  width: 99%;
+  height: 65px;              
   box-shadow: 6px 6px 5px darken($background-grey, 2%);
-  border-radius: 10px;
-               
-                &--color-grey{
+  border-radius: 13px;
+  position: relative;
+  margin-bottom: 20px; 
+
+                &__icon{
                 color: darken($icon-color, 50%);
-                }      
+                }
+                &__description{
+                  font-weight: 550;
+                }
+          
+               }  
+              
+ 
+ .btn::before{
+  content: '1';
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: $background-number;
+  color: nth($color-text, 2);
+  display: flex;
+  justify-content: center;
  }
-}
+ 
+
+
+ 
+
+
 
 
 
