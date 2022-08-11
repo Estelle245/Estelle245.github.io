@@ -170,7 +170,36 @@ align-self: auto;
   }
  }
 
- 
+ /* footer */
+ footer{
+  background-color: lighten($background-color-footer, 30%);
+  color: nth($color-text, 2);
+  padding: 40px;
+  font-size: 25px;
+ }
+ h4{
+  color: nth($color-text, 2);
+  font-family: shrikhand;
+  font-weight: 100;
+ }
+ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+li{
+  margin-bottom: 10px;
+}
+ .btn-foot{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 10px;
+
+  &__sign{
+    margin-right: 53px;
+  }
+ }
 
 
  
