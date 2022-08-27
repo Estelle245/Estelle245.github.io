@@ -3,10 +3,16 @@
     align-items: center;
     justify-content: center;
     color: nth($color-text, 2);
-    background: linear-gradient(0.49turn, #FF79DA 0%, #9356DC 100%);
+    background: linear-gradient(0.49turn, $color-gradient-secondary 0%, $color-gradient-primary 100%);
     max-width: 282px;
     width: 100%;
     height: 65px;
     border-radius: 35px / 35px;
     font-size: 22px;
+    cursor: pointer;
+    box-shadow: 4px 5px 5px darken($box-shadow-btn-pink, 10%);
+      &:hover{
+       background: linear-gradient(0.49turn, $color-gradient-secondary-lighten 0%, $color-gradient-primary-lighten 100%);
+       box-shadow: 4px 5px 5px darken($box-shadow-btn-pink, 50%);
+      }
   }

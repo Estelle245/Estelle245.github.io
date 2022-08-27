@@ -2,6 +2,7 @@ $background-grey: #F2F2F2;
 $background-number: #9356DC;
 
 $background-btn-pink: #9356DC;
+$box-shadow-btn-pink: #F2F2F2;
 $background-cards: white;
 $label-color-cards: green;
 $background-color-footer: black;
@@ -12,9 +13,12 @@ $icon-color-hover: #9356DC;
 $btn1-margin-right: 50px;
 $color-gradient-primary:  #9356DC;
 $color-gradient-secondary:  #FF79DA;
+$color-gradient-primary-lighten: lighten(#9356DC, 4%);
+$color-gradient-secondary-lighten: lighten(#FF79DA, 4%);
 
 $menu-box-shadow: #F2F2F2;
-$color-linear-gradient:  linear-gradient(0.49turn, #FF79DA 0%, #9356DC 100%);
+$color-linear-gradient: linear-gradient(0.49turn, #FF79DA 0%, #9356DC 100%);
+$color-linear-gradient-heart: linear-gradient(0turn, #FF79DA 0%, #9356DC 100%);
 $border-title-menu: #99E2D0;
 $color-arrow: black;
 $color-lien: white;
