@@ -378,9 +378,15 @@ article {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  z-index: -2;
-  -webkit-animation: out ease-out 3s 3s;
-          animation: out ease-out 3s 3s;
+  z-index: 1;
+  -webkit-animation: out 0.5s ease-out;
+          animation: out 0.5s ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 .loader__text {
   font-size: 40px;
@@ -426,12 +432,30 @@ article {
   }
 }
 @-webkit-keyframes out {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  80% {
+    opacity: 0;
+    transform: translate(0);
+  }
   100% {
-    transform: translate(-9999px);
+    transform: translate(100%);
+    opacity: 0;
   }
 }
 @keyframes out {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  80% {
+    opacity: 0;
+    transform: translate(0);
+  }
   100% {
-    transform: translate(-9999px);
+    transform: translate(100%);
+    opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */
