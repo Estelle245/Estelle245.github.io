@@ -1,10 +1,9 @@
-
-@import "./base/normes";
-@import"./base/polices";
-@import "./utils/variables";
-@import"utils/mixins";
+@import './base/normes';
+@import'./base/polices';
+@import './utils/variables';
+@import'./utils/mixins';
 @import'./layouts/header';
-@import './Pages/section-entête.scss';
+@import './Pages/header-section';
 @import'./components/btn-pink';
 @import './Pages/functioning-section'; 
 @import './Pages/cards-section';
