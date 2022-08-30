@@ -1,5 +1,6 @@
 .fa-arrow-left{
-    color: lighten($color-arrow, 30%);   
+    color: lighten($color-arrow, 30%);  
+    font-size: 1.8rem; 
 }
 /*section image */
 .section-img{
@@ -59,22 +60,75 @@ font-size: 1.3em;
     box-shadow: 2px 3px 7px darken($menu-box-shadow, 10%);
     border-radius: 20px;
     margin-top: 20px;
+    cursor: pointer;
 
  &__details{
  display: flex;
  align-items: center;
- justify-content: space-between;  
+ justify-content: space-between; 
+ position: relative;
+
+ 
 
  &--description{
     font-weight: 300;
     color: $color-text, 1;
     font-size: large;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
  }
  &--price{
     font-weight: bolder;
+    transform: translate(0px);
+    transition: transform 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
  }
+
  }
+ &:hover > .menu__details {
+  > .menu__details--price{
+    transform: translateX(-90px);
+ 
+  }
+    
+ }
+ /* ANIMATION DU CHECK */
+ &__check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: $check-color;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    font-size: 2rem;
+    right: 0;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 400ms linear;
+ }
+ &:hover > .menu__check{
+    transform: translateX(10px);
+    opacity: 1;
+ }
+ 
 }
+/* L'ANIMATION DE ROTATION DU CHECK */
+.fa-circle-check{
+ transform: rotate(0deg);
+ transition: all 400ms;
+}
+.menu:hover > .menu__check{
+    > .fa-circle-check{
+     transform: rotate(360deg);
+    }
+
+}
+
+
+
 
 .second-title{
 font-weight: 300;
@@ -88,3 +142,43 @@ position: relative;
  border-bottom: 4px solid $border-title-menu;
  }
    }
+
+.menu{
+    animation: emergence 1000ms ease-in;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    
+}
+.menu:nth-child(1){
+    animation-delay: 300ms;
+
+}
+.menu:nth-child(2){
+    animation-delay: 300ms;
+}
+.menu:nth-child(3){
+    animation-delay: 600ms;
+}
+.menu:nth-child(4){
+    animation-delay: 900ms;
+}
+.menu:nth-child(5){
+    animation-delay: 1200ms;
+}
+@keyframes emergence{
+ 0%{
+    transform: translateY(-50%);
+    opacity: 0;
+    
+ }
+ 50%{
+    transform: translateY(0);
+    opacity: .5;
+ }
+ 100%{
+    opacity: 1;
+ }
+}
+
+
+

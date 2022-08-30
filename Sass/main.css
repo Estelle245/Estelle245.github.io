@@ -277,6 +277,7 @@ li {
 
 .fa-arrow-left {
   color: #4d4d4d;
+  font-size: 1.8rem;
 }
 
 /*section image */
@@ -342,19 +343,60 @@ article {
   box-shadow: 2px 3px 7px #d9d9d9;
   border-radius: 20px;
   margin-top: 20px;
+  cursor: pointer;
+  /* ANIMATION DU CHECK */
 }
 .menu__details {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .menu__details--description {
   font-weight: 300;
   color: black white #F2F2F2, 1;
   font-size: large;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__details--price {
   font-weight: bolder;
+  transform: translate(0px);
+  transition: transform 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
+}
+.menu:hover > .menu__details > .menu__details--price {
+  transform: translateX(-90px);
+}
+.menu__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #99E2D0;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  font-size: 2rem;
+  right: 0;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 400ms linear;
+}
+.menu:hover > .menu__check {
+  transform: translateX(10px);
+  opacity: 1;
+}
+
+/* L'ANIMATION DE ROTATION DU CHECK */
+.fa-circle-check {
+  transform: rotate(0deg);
+  transition: all 400ms;
+}
+
+.menu:hover > .menu__check > .fa-circle-check {
+  transform: rotate(360deg);
 }
 
 .second-title {
@@ -370,6 +412,67 @@ article {
   border-bottom: 4px solid #99E2D0;
 }
 
+.menu {
+  -webkit-animation: emergence 1000ms ease-in;
+          animation: emergence 1000ms ease-in;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.menu:nth-child(1) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu:nth-child(2) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu:nth-child(3) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.menu:nth-child(4) {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.menu:nth-child(5) {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+@-webkit-keyframes emergence {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes emergence {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader {
   position: absolute;
   width: 100%;
