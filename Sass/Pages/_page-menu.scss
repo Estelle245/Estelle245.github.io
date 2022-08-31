@@ -43,7 +43,7 @@ article{
     width: 95%;
     bottom: 40px;
     position: relative;
-    margin-bottom:20px;
+    margin: 15px;
 }
 .third-title{
 margin: 0;
@@ -182,6 +182,19 @@ position: relative;
     opacity: 1;
  }
 }
+.div-menu{
+    width: 100%;
+}
 /* MEDIA QUERIES */
 
+@media screen and (min-width: 1250px) {
+.div-menu{
+display: flex;
+justify-content: space-between;
+width: 98%;
+}
+article{
+ width: 400px; 
+}
+}
 
