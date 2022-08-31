@@ -72,7 +72,7 @@ font-size: 1.3em;
 
  &--description{
     font-weight: 300;
-    color: $color-text, 1;
+    color: nth($color-text, 1);
     font-size: large;
     transition: text-overflow 400ms linear;
  }
@@ -191,6 +191,7 @@ position: relative;
 .div-menu{
 display: flex;
 justify-content: space-between;
+align-items: center;
 width: 98%;
 }
 article{

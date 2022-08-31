@@ -12,12 +12,12 @@ footer{
     font-weight: 100;
     
    }
-  ul{
+  .ul{
     list-style: none;
     padding: 0;
     margin-top: 10px;
   }
-  li{
+  .li{
     margin-bottom: 10px;
     color: $color-lien;
   }
@@ -35,7 +35,7 @@ footer{
      justify-content: space-around;
      padding-bottom: 60px;
     }
-    ul{
+    .ul{
       margin-top: 2px;
     }
   }
