@@ -387,17 +387,22 @@ article {
   font-weight: 300;
   color: black white #F2F2F2, 1;
   font-size: large;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: text-overflow 400ms linear;
 }
 .menu__details--price {
   font-weight: bolder;
-  transform: translate(0px);
-  transition: transform 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
+  margin-left: 0;
+  margin-right: 0px;
+  transition: all 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
 }
 .menu:hover > .menu__details > .menu__details--price {
-  transform: translateX(-90px);
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.menu:hover > .menu__details > .menu__details--description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu__check {
   display: flex;
@@ -504,6 +509,7 @@ article {
     opacity: 1;
   }
 }
+/* MEDIA QUERIES */
 .loader {
   position: absolute;
   width: 100%;

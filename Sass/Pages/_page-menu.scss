@@ -74,23 +74,26 @@ font-size: 1.3em;
     font-weight: 300;
     color: $color-text, 1;
     font-size: large;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    transition: text-overflow 400ms linear;
  }
  &--price{
     font-weight: bolder;
-    transform: translate(0px);
-    transition: transform 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
+    margin-left: 0;
+    margin-right: 0px;
+    transition: all 400ms linear; /* LE PRIX SE DECALE LORS DE L'ANIMATION */
  }
 
  }
  &:hover > .menu__details {
   > .menu__details--price{
-    transform: translateX(-90px);
- 
+    margin-left: 70px;
+    margin-right: 70px;
   }
-    
+  >.menu__details--description{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  } 
  }
  /* ANIMATION DU CHECK */
  &__check{
@@ -179,6 +182,6 @@ position: relative;
     opacity: 1;
  }
 }
-
+/* MEDIA QUERIES */
 
 
