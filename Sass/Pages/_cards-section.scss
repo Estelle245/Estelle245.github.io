@@ -13,8 +13,8 @@
     &::after{ 
     content: 'Nouveau';
     position: absolute;
-    background-color: lighten($label-color-cards, 65%);
-    color: $label-color-cards;
+    background-color: darken($label-color-cards, 10%);
+    color: darken($label-color-cards, 40%);
     width: 80px;
     height: 30px;
     top: 20px;
@@ -22,6 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
+    border-radius: 2px;
+    
     }
     
     &__img{ 
@@ -63,9 +66,25 @@
     right: 0;
 
   }  
-  
-  
+  .div-cards{
+    width: 100%;
+  }
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 900px){
+.div-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
  
-   
-   
-   
+
+}
+.size-lien{
+  width: 40%;
+}
+.div-cards2{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+}
