@@ -37,6 +37,9 @@
 
     &__icon{
       color: darken($icon-color, 50%);
+      font-size: 1.5rem;
+      position: absolute;
+      left: 15%;
       &:hover{
         color: $icon-color-hover;
       }
@@ -44,5 +47,7 @@
     &__description{
       font-size: 22px;
       font-weight: 580;
+      position: absolute;
+      left: 30%;
      }
 }

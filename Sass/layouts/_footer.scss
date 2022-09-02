@@ -1,9 +1,8 @@
 footer{
-    background-color: lighten($background-color-footer, 30%);
+    background-color: lighten($background-color-footer, 25%);
     color: nth($color-text, 2);
-    padding: 15px;
-    padding-left: 25px;
-    font-size: 25px;
+    padding: 10px 15px 30px 25px;
+    font-size: 1.3rem;
    text-decoration: none;
    }
    h4{
@@ -24,11 +23,18 @@ footer{
    .element-foot{
     display: flex;
     width: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    align-items: center;
+    & i{
+      font-size: 1.2rem;
+    }
+    & div{
+      position: absolute;
+      left: 15%;
+    }
    }
-  .element-foot i {
-  padding-right: 20px;
-  }
+  
   @media screen and (min-width: 900px) {
     .div-footer{
      display: flex;

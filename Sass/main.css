@@ -168,6 +168,9 @@ h3 {
 }
 .ftn__icon {
   color: #737373;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 15%;
 }
 .ftn__icon:hover {
   color: #9356DC;
@@ -175,6 +178,8 @@ h3 {
 .ftn__description {
   font-size: 22px;
   font-weight: 580;
+  position: absolute;
+  left: 30%;
 }
 
 .cards-section {
@@ -261,11 +266,10 @@ h3 {
   }
 }
 footer {
-  background-color: #4d4d4d;
+  background-color: #404040;
   color: white;
-  padding: 15px;
-  padding-left: 25px;
-  font-size: 25px;
+  padding: 10px 15px 30px 25px;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
@@ -289,11 +293,16 @@ h4 {
 .element-foot {
   display: flex;
   width: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  align-items: center;
 }
-
 .element-foot i {
-  padding-right: 20px;
+  font-size: 1.2rem;
+}
+.element-foot div {
+  position: absolute;
+  left: 15%;
 }
 
 @media screen and (min-width: 900px) {
