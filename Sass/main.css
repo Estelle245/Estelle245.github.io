@@ -243,6 +243,8 @@ h3 {
   cursor: pointer;
   position: absolute;
   right: 0;
+  bottom: 30px;
+  align-self: flex-start;
 }
 
 .div-cards {
