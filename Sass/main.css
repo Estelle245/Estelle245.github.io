@@ -432,7 +432,7 @@ article {
   transition: all 400ms linear;
 }
 .menu:hover > .menu__check {
-  transform: translateX(10px);
+  transform: translateX(0px);
   opacity: 1;
 }
 
@@ -504,6 +504,7 @@ article {
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -518,6 +519,7 @@ article {
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 .div-menu {
