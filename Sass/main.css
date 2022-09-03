@@ -611,7 +611,7 @@ article {
     transform: translate(0);
   }
   100% {
-    transform: translate(100%);
+    transform: translate(-100%);
     opacity: 0;
   }
 }
@@ -625,7 +625,7 @@ article {
     transform: translate(0);
   }
   100% {
-    transform: translate(100%);
+    transform: translate(-100%);
     opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */
