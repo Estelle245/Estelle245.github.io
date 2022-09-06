@@ -377,6 +377,7 @@ article {
 .third-title {
   margin: 0;
   font-size: 1.3em;
+  transition: text-overflow 400ms linear;
 }
 
 .menu {
@@ -413,7 +414,7 @@ article {
 }
 .menu:hover > .menu__details > .menu__details--price {
   margin-left: 70px;
-  margin-right: 70px;
+  margin-right: 85px;
 }
 .menu:hover > .menu__details > .menu__details--description {
   text-overflow: ellipsis;
